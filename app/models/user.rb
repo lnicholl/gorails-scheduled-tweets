@@ -4,6 +4,9 @@
 #password:string virtual
 #password_confirmation:string virtual
 class User < ApplicationRecord
+    has_many :twitter_accounts
+    has_many :tweets
+
     #uses password_digest, password hashed securely
     has_secure_password
 
